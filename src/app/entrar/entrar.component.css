@@ -1,0 +1,38 @@
+#img-bg {
+    background-image: url('https://i.pinimg.com/originals/af/a9/78/afa978d7a0398c284197d4b11c90f290.gif');
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bg {
+    background: rgb(221, 201, 224);
+    background: linear-gradient(0deg, rgb(173, 224, 240) 5%, rgb(236, 194, 222) 62%);
+}
+
+.message{
+    font-family: monospace;
+    color: rgb(72, 144, 148);
+    
+}
+
+@keyframes textclip {
+to {
+    background-position: center;
+}
+}
+
+
+.botao {
+font-family: 'Roboto Mono', monospace;
+width: 150px;
+background-color: rgb(72, 144, 148);
+}
+
+.txt-final{
+    font-size: large;
+    font-family: monospace;
+    color: rgb(72, 144, 148);
+}

@@ -1,0 +1,30 @@
+#img-bg {
+    background-image: url("https://c.tenor.com/OFntLtUdlQwAAAAC/aesthetic-flower.gif");
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg {
+    background: rgb(221, 201, 224);
+    background: linear-gradient(0deg, rgb(173, 224, 240) 5%, rgb(236, 194, 222) 62%);
+}
+
+
+
+.message {
+    font-family: monospace;
+    color: rgb(72, 144, 148);    
+}
+
+
+@keyframes textclip {
+    to {
+    background-position: center;
+    }
+}
+
+.botao {
+    font-family: 'Roboto Mono', monospace;
+}

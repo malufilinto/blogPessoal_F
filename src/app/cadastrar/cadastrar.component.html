@@ -6,41 +6,41 @@
         <div class="col-md-6">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-8">
-                    <h1 class="text-center mb-3 message">Cadastre-se</h1>
+                    <h1 class="text-center mb-3 animate-charcter">Cadastre-se</h1>
 
                     <form>
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Insira seu nome">
-                        </div><br>
+                            <input [(ngModel)]="usuario.nome" class="form-control" type="text" placeholder="Nome*" name="nome" >
+                        </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="email" placeholder="Insira seu e-mail">
-                        </div><br>
+                            <input [(ngModel)]="usuario.usuario" class="form-control" type="email" placeholder="E-mail*" name="email">
+                        </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="password" placeholder="Insira sua senha">
-                        </div><br>
+                            <input (input)="confirmSenha($event)" class="form-control" type="password" placeholder="Senha*" name="senha">
+                        </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="password" placeholder="Repita a mesma senha">
-                        </div><br>
+                            <input [(ngModel)]="usuario.senha" class="form-control" type="password" placeholder="Confirmar senha*" name="ConfirmSenha">
+                        </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Insira uma foto">
-                        </div><br>
-
+                            <input [(ngModel)]="usuario.foto" class="form-control" type="text" placeholder="Foto*" name="foto">
+                        </div>
+                        
                         <div>
-                            <label class="text-light" for="">Selecione o tipo de usuário:</label>
-                            <select class="form-control" name="selecionar" id="selecionar">
-                                <option value="">Administrador</option>
-                                <option value="">Usuário padrão</option>
+                            <select class="form-control" name="selecionar" id="selecionar" (change)="tipoUser($event)" name="tipo">
+                                <option value="" selected disabled>Selecione um tipo de usuário*</option>
+                                <option value="adm">Administrador</option>
+                                <option value="normal">Normal</option>
                             </select>
                         </div>
 
                         <div class="d-flex justify-content-center mt-4">
-                            <a routerLink="/entrar"><button type="submit" class="btn mr-5 btn-danger botao">Cancelar</button></a>
+                            <a routerLink="/entrar"><button type="submit" class="btn mr-5 neon-red">Cancelar</button></a>
                             
-                            <button type="submit" class="btn btn-success botao">Confirmar</button>
+                            <button type="submit" class="btn neon-green" (click)="cadastrar()">Confirmar</button>
                         </div>
 
                     </form>
